@@ -1,0 +1,22 @@
+---
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+```{r}
+library(reactable)
+library(dplyr)
+library(tidyr)
+
+options(box.path = here::here())
+
+box::use(tablas = data / mocked / matriz[balances = balance_matriz, diferencias])
+```
+
+```{r}
+tablas$balance_matriz |>
+  reactable()
+```
