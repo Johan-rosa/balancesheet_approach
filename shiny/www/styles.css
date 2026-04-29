@@ -1,0 +1,21 @@
+.matrix {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  border: 1px solid hsl(213, 33%, 93%);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.header,
+.matrix .rt-tbody .rt-td.header {
+  background-color: hsl(213, 45%, 97%);
+  border-bottom-color: hsl(213, 33%, 93%);
+  border-bottom-width: 1px;
+  color: hsl(213, 13%, 33%);
+  font-weight: 600;
+}
+
+.header[aria-sort]:hover,
+.header[aria-sort]:focus {
+  color: hsl(213, 55%, 50%);
+}

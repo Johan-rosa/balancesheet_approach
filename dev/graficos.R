@@ -7,7 +7,7 @@ options(box.path = here::here())
 
 box::use(data / mocked / balances[balances])
 
-"#855C75FF, #D9AF6BFF, #AF6458FF, #736F4CFF, #526A83FF, #625377FF, #68855CFF, #9C9C5EFF, #A06177FF, #8C785DFF, #467378FF, #7C7C7CFF" |>
+"#5495CFFF, #F5AF4DFF, #DB4743FF, #7C873EFF, #FEF4D5FF" |>
   stringr::str_split(", ") |>
   unlist() |> 
   dput()

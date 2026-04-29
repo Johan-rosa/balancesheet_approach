@@ -30,6 +30,33 @@ tablas$balance_matriz |>
   )
 ```
 
+```{r}
+
+diferencias_table <- diferencias |>
+  mutate(
+    across(4, \(x) x * 100),
+    across(where(is.numeric), \(x) round(x, 2))
+  )
+
+total <- diferencias_table |> 
+  filter(sector == "total") |>
+  mutate(sector = stringr::str_to_title(sector))
+
+diferencias_table |>
+  filter_out(sector == "total") |> 
+  reactable(
+    class = "matrix",
+    defaultColDef = colDef(
+      headerClass = "header", 
+      footer = \(values, col) total[[col]],
+      footerStyle = list(fontWeight = "bold")
+    ),
+    columns = list(
+      sector = colDef(name = "Sector")
+    )
+  )
+```
+
 ```{css}
 .matrix {
   margin-top: 1rem;
