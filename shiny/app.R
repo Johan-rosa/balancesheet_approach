@@ -198,7 +198,11 @@ ui <- page_sidebar(
     
     layout_columns(
       fill = FALSE,
-      style = css(grid_template_columns = "2fr 1fr"),
+      #style = css(grid_template_columns = "2fr 1fr"),
+      col_widths = breakpoints(
+        sm = c(12, 12),
+        xl = c(8, 4)
+      ),
       div(matriz_html),
       div(diferencias_html)
     ),
