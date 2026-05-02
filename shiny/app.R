@@ -43,7 +43,12 @@ plot_posicion <- function(
     ) |>  
     hc_xAxis(title = FALSE) |>
     hc_colors(cols) |>
-    hc_title(text = sector)
+    hc_title(
+      text = sector,
+      style = list(
+        fontSize = "0.9rem"
+      )
+    )
 }
 
 # Tablas 
@@ -60,7 +65,8 @@ matriz_html <- tablas$balance_matriz |>
     defaultColDef = colDef(
       cell = \(vals, index, name) {
         if (name == "sector") return(vals)
-        scales::comma(vals, accuracy = 0.01)
+        fmtd <- scales::comma(vals, accuracy = 0.01)
+        ifelse(is.na(fmtd), "", fmtd)
       },
       headerClass = "header"
     ),
@@ -87,7 +93,8 @@ diferencias_html <- diferencias_table |>
     ),
     columns = list(
       sector = colDef(name = "Sector")
-    )
+    ),
+    highlight = TRUE
   )
 
 
@@ -101,6 +108,7 @@ plots <- purrr::map(
 )
 
 ui <- page_sidebar(
+  fillable = FALSE,
   tags$head(
     tags$link(rel = "stylesheet", type = "text/css", href = "styles.css")
   ),
@@ -112,11 +120,15 @@ ui <- page_sidebar(
     div(diferencias_html)
   ),
   layout_columns(
-    !!!plots[1:3]
+    !!!plots,
+    col_widths = breakpoints(
+      sm = rep(12, 6),
+      md = rep(6, 6),
+      xl = rep(4, 6)
+    ),
+    row_heights = "350px"
   ),
-  layout_columns(
-    !!!plots[4:6]
-  )
+  tags$script(src = "main.js")
 )
 
 server <- function(input, output, session) {
