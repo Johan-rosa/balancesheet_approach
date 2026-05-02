@@ -33,21 +33,21 @@ econ_total <- tibble::tribble(
 "Total Economía Nacional Agregado", 2017L,  0.6,   -13,  -12.5
 )
 
-sp <- tibble::tribble(
+spriv <- tibble::tribble(
                         ~sector, ~year,  ~mn,  ~me, ~total,
- "Sector Privado no Financiero", 2005L,   19,  8.4,   27.3,
- "Sector Privado no Financiero", 2006L, 18.2,  9.4,   27.6,
- "Sector Privado no Financiero", 2007L, 17.7,  8.3,     26,
- "Sector Privado no Financiero", 2008L, 18.8,  7.2,   25.9,
- "Sector Privado no Financiero", 2009L, 18.5,  7.8,   26.3,
- "Sector Privado no Financiero", 2010L, 14.8,  5.8,   20.7,
- "Sector Privado no Financiero", 2011L, 14.1,  6.3,   20.5,
- "Sector Privado no Financiero", 2012L,   16,  7.1,   23.1,
- "Sector Privado no Financiero", 2013L, 16.7,  6.9,   23.6,
- "Sector Privado no Financiero", 2014L, 17.4,  6.3,   23.7,
- "Sector Privado no Financiero", 2015L, 19.1,  6.4,   25.5,
- "Sector Privado no Financiero", 2016L, 20.4,    7,   27.4,
- "Sector Privado no Financiero", 2017L, 21.3, 10.5,   31.8
+ "Sector Privado", 2005L,   19,  8.4,   27.3,
+ "Sector Privado", 2006L, 18.2,  9.4,   27.6,
+ "Sector Privado", 2007L, 17.7,  8.3,     26,
+ "Sector Privado", 2008L, 18.8,  7.2,   25.9,
+ "Sector Privado", 2009L, 18.5,  7.8,   26.3,
+ "Sector Privado", 2010L, 14.8,  5.8,   20.7,
+ "Sector Privado", 2011L, 14.1,  6.3,   20.5,
+ "Sector Privado", 2012L,   16,  7.1,   23.1,
+ "Sector Privado", 2013L, 16.7,  6.9,   23.6,
+ "Sector Privado", 2014L, 17.4,  6.3,   23.7,
+ "Sector Privado", 2015L, 19.1,  6.4,   25.5,
+ "Sector Privado", 2016L, 20.4,    7,   27.4,
+ "Sector Privado", 2017L, 21.3, 10.5,   31.8
  )
 
 osf <- tibble::tribble(
@@ -86,19 +86,19 @@ osd <- tibble::tribble(
 
 sp <- tibble::tribble(
         ~sector, ~year,    ~mn,    ~me, ~total,
-"Secto Público", 2005L,  -9.37, -18.81, -28.18,
-"Secto Público", 2006L, -16.75, -17.83, -34.59,
-"Secto Público", 2007L, -16.64, -15.79, -32.43,
-"Secto Público", 2008L, -17.85, -15.73, -33.58,
-"Secto Público", 2009L, -17.65, -18.51, -36.16,
-"Secto Público", 2010L, -16.58,  -19.5, -36.08,
-"Secto Público", 2011L, -15.08, -21.69, -36.77,
-"Secto Público", 2012L,  -17.2, -24.63, -41.83,
-"Secto Público", 2013L, -17.06, -26.91, -43.97,
-"Secto Público", 2014L, -17.12, -26.55, -43.66,
-"Secto Público", 2015L, -18.88,  -25.1, -43.98,
-"Secto Público", 2016L, -20.25, -25.64,  -45.9,
-"Secto Público", 2017L, -20.39, -28.81,  -49.2
+"Sector Público", 2005L,  -9.37, -18.81, -28.18,
+"Sector Público", 2006L, -16.75, -17.83, -34.59,
+"Sector Público", 2007L, -16.64, -15.79, -32.43,
+"Sector Público", 2008L, -17.85, -15.73, -33.58,
+"Sector Público", 2009L, -17.65, -18.51, -36.16,
+"Sector Público", 2010L, -16.58,  -19.5, -36.08,
+"Sector Público", 2011L, -15.08, -21.69, -36.77,
+"Sector Público", 2012L,  -17.2, -24.63, -41.83,
+"Sector Público", 2013L, -17.06, -26.91, -43.97,
+"Sector Público", 2014L, -17.12, -26.55, -43.66,
+"Sector Público", 2015L, -18.88,  -25.1, -43.98,
+"Sector Público", 2016L, -20.25, -25.64,  -45.9,
+"Sector Público", 2017L, -20.39, -28.81,  -49.2
 )
 
 bc <- tibble::tribble(
@@ -125,7 +125,7 @@ balances <- dplyr::bind_rows(
     SPub = sp,
     OSD = osd,
     OSF = osf,
-    SPriv = sp,
+    SPriv = spriv,
     TOT = econ_total,
     NR = nr
   ),

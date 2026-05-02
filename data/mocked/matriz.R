@@ -1,6 +1,6 @@
 #' @export
 balance_matriz <- tibble::tribble(
-           ~sector, ~`Banco Central`,         ~OSD,         ~OSF, ~`Sector Público`, ~`Sector Privado`, ~`No Residente`,
+           ~sector, ~`Banco Central`,         ~OSD,         ~OSF, ~`Sector Público`, ~`Sector Privado`, ~`No Residentes`,
    "Banco Central",               NA,    406053.56,  252555.7485,      -551485.0557,        148722.905,    -314635.6594,
              "OSD",     -406571.9138,           NA,  85549.43547,      -131470.7018,        286510.144,     51278.20417,
              "OSF",     -252519.0681, -84741.21724,           NA,        -131886.25,       460683.5229,     1163.424384,
