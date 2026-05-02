@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "locale": "en_US",
+  "platform": "4.5.0",
+  "metadata": {
+    "appmode": "static",
+    "primary_rmd": null,
+    "primary_html": "dev/matrices.html",
+    "content_category": null,
+    "has_parameters": false
+  },
+  "packages": null,
+  "files": {
+    ".Rprofile": {
+      "checksum": "d2a15421b93079754776b052f4aabced"
+    },
+    "data/mocked/balances.R": {
+      "checksum": "3a8014dce153f5c5999ad6cc7819f581"
+    },
+    "data/mocked/matriz.R": {
+      "checksum": "fadbbd0234bd9e05e01efb47e4dc6554"
+    },
+    "dev/graficos.R": {
+      "checksum": "e0e567a13cf2995cef0960458ac29507"
+    },
+    "dev/matrices.html": {
+      "checksum": "5fdb40c60d0e25cba9eda07efd9098c5"
+    },
+    "dev/matrices.rmd": {
+      "checksum": "176f6a0afc285322d478dce06b21b1e2"
+    },
+    "dev/network.R": {
+      "checksum": "3f44d60522d7b829b5d47689a03045ed"
+    },
+    "README.md": {
+      "checksum": "60fa34d1b8bb55065feb4b61342b61c9"
+    },
+    "renv.lock": {
+      "checksum": "242a15776318486f800428129ef14546"
+    },
+    "requerimientos.md": {
+      "checksum": "25bc7665053b3056ce9936d70085c51c"
+    },
+    "resources/Outputs.xlsx": {
+      "checksum": "b4d7dc8f1850740121d8d7c9f382fbd9"
+    },
+    "shiny/app.R": {
+      "checksum": "d20b01e1604cbf369ca86c58a342d9dd"
+    },
+    "shiny/www/main.js": {
+      "checksum": "54c3c61844935b8af5b6ffcad504db40"
+    },
+    "shiny/www/styles.css": {
+      "checksum": "be964b598de1ef32043c0df8d2be5877"
+    },
+    "shiny/www/undraw_upload-warning_aqma.svg": {
+      "checksum": "2fa87dd0cb4fc59c9644f14f10d60f3b"
+    }
+  },
+  "users": null
+}
